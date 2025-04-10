@@ -6,23 +6,23 @@ Tech Stack: Spring Boot, Java
 
 This Project consists of three APIs described as below:
 
-1. GET | api/v1.0/surveys/{id} -> Get a particular survey record based on its Id.
-2. GET | api/v1.0/surveys -> Get all the surveys done till date.
-3. POST | api/v1.0/surveys -> Save a new survey.
+1. **GET** | `api/v1.0/surveys/{id}` → Get a particular survey record based on its ID.  
+2. **GET** | `api/v1.0/surveys` → Get all the surveys done till date.  
+3. **POST** | `api/v1.0/surveys` → Save a new survey.
 
-SurveyModel Contract:
+### SurveyModel Contract:
 ```json
-        {
-            "firstName": "John",
-            "lastName": "Doe",
-            "email": "john.doe@mail.com",
-            "address": "9155 Walnut St",
-            "city": "New York",
-            "state": "NY",
-            "zip": "22031",
-            "telephone": "8888888888",
-            "dateOfSurvey": "04-28-2022",
-            "recommendation": "Very Likely",
-            "interest": "Friends",
-            "likings": "Students"
-        }
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@mail.com",
+    "address": "9155 Walnut St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "22031",
+    "telephone": "8888888888",
+    "dateOfSurvey": "04-28-2022",
+    "recommendation": "Very Likely",
+    "interest": "Friends",
+    "likings": "Students"
+}
