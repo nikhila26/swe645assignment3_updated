@@ -7,14 +7,14 @@ pipeline {
         stage('Clean Up Old Docker Image') {
             steps {
                 // Remove any existing Docker images if they exist
-                sh 'docker rmi -f satluri2/survey:latest || true'
+                sh 'docker rmi -f nikhila10/swesurvey645:latest || true'
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 // Build the Docker image using the Dockerfile
-                sh 'docker build --no-cache -t satluri2/survey:latest .'
+                sh 'docker build --no-cache -t nikhila10/swesurvey645:latest .'
             }
         }
 
@@ -28,20 +28,20 @@ pipeline {
         stage('Push Image to Docker Hub') {
             steps {
                 // Push the Docker image to Docker Hub
-                sh 'docker push satluri2/survey:latest'
+                sh 'docker push nikhila10/swesurvey645:latest'
             }
         }
 
         stage('Deploy to Kubernetes') {
             steps {
                 // Update Kubernetes deployment with the new Docker image
-                sh 'kubectl set image deployment/surveyassign3-deploy container-0=satluri2/survey:latest -n default'
+                sh 'kubectl set image deployment/surveyswe645 container-0=nikhila10/swesurvey645:latest -n default'
 
                 // Roll out the deployment to apply the new image
-                sh 'kubectl rollout restart deployment/surveyassign3-deploy -n default'
+                sh 'kubectl rollout restart deployment/surveyswe645 -n default'
 
                 // Verify rollout status
-                sh 'kubectl rollout status deployment/surveyassign3-deploy -n default'
+                sh 'kubectl rollout status deployment/surveyswe645 -n default'
             }
         }
     }
