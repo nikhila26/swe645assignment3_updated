@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "survey645swe"
+  cluster:
+    server: "https://3.228.61.235/k8s/clusters/c-m-w9hpzq9k"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2RENDQ\
+      VdPZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQkdNUnd3R2dZRFZRUUtFeE5rZVc1aGJXbGoKY\
+      kdsemRHVnVaWEl0YjNKbk1TWXdKQVlEVlFRRERCMWtlVzVoYldsamJHbHpkR1Z1WlhJdFkyRkFNV\
+      GMwTkRjNApOekl5T1RBZUZ3MHlOVEEwTVRZd056QTNNRGxhRncwek5UQTBNVFF3TnpBM01EbGFNR\
+      Vl4SERBYUJnTlZCQW9UCkUyUjVibUZ0YVdOc2FYTjBaVzVsY2kxdmNtY3hKakFrQmdOVkJBTU1IV\
+      1I1Ym1GdGFXTnNhWE4wWlc1bGNpMWoKWVVBeE56UTBOemczTWpJNU1Ga3dFd1lIS29aSXpqMENBU\
+      VlJS29aSXpqMERBUWNEUWdBRTNWNi9xZGNURUVMUgpVZ1JzU1VvVmN3NE52S09xZ3FPZmdkYlg1d\
+      XNab2NPbHAxU2gvS21RdUJqM1piTWYzMjFmTVNCSXN4R2ovc2hZClFLVXRqZFNCa0tOQ01FQXdEZ\
+      1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93UUZNQU1CQWY4d0hRWUQKVlIwT0JCWUVGQ\
+      nZZZTlrZHFObnB6MEtidG13UHg3aTdOMUNSTUFvR0NDcUdTTTQ5QkFNQ0EwY0FNRVFDSUd0cwp4V\
+      XMvbWwzcnBCOXZBY2pReEFaa0NlOU4wUThJVnhtZjZBTk9TazVBQWlCUXpoME5iaVBxdnMzMmxzY\
+      lZ3M1hrCk5mWG1NTS9aUHgzcnV0UUFtdUtRNUE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t"
+
+users:
+- name: "survey645swe"
+  user:
+    token: "kubeconfig-user-c59bncd8lc:j9wnzj2w7zwzqlpnjcntkbgfs5klc7qn2mbhj9lrsx7q68d5fd6k8s"
+
+
+contexts:
+- name: "survey645swe"
+  context:
+    user: "survey645swe"
+    cluster: "survey645swe"
+
+current-context: "survey645swe"
